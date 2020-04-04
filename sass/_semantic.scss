@@ -1,0 +1,18 @@
+.ui-card {
+  margin-bottom: 1rem !important;
+
+  &__description {
+    text-overflow: ellipsis;
+    margin: 0 0 2em 0;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.ui.card {
+  margin: 1em auto;
+}
+
+.container {
+  padding: 6rem;
+}

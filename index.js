@@ -826,7 +826,7 @@ const modal = $.modal({
 
 const toHTML = person => `
 <div class="column">
-                <div class="ui card">
+                <div class="ui card ui-card">
                     <div class="image">
                         <img src="${person.Photos[0].Url}">
                     </div>
@@ -835,7 +835,7 @@ const toHTML = person => `
                         <div class="meta">
                             <span class="date">${person.DateOfBirth}</span>
                         </div>
-                        <div class="description ">
+                        <div class="description ui-card__description">
                             ${person.Introduction}
                         </div>
                     </div>                    
