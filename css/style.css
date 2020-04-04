@@ -1,0 +1,105 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+td:not([align]), th:not([align]) {
+  text-align: left; }
+
+.ui.card {
+  margin: 0 auto; }
+
+.container {
+  padding: 6rem; }
+
+.x-modal.open .modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.x-modal.open .modal-overlay {
+  background: rgba(0, 0, 0, 0.5); }
+
+.x-modal.open .modal-overlay,
+.x-modal.open .modal-window {
+  opacity: 1;
+  z-index: 1000; }
+
+.x-modal.hide > .modal-overlay > .modal-window {
+  transform: translate(-50%, -50%) translateY(-300%);
+  transition: all 0.4s cubic-bezier(0.36, 0, 0.66, -0.56); }
+
+.x-modal.hide .modal-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: all .5s; }
+
+.modal-overlay {
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background .2s ease-in; }
+
+.modal-window {
+  opacity: 0;
+  z-index: -1;
+  width: 600px;
+  border-radius: 3px;
+  background: #ffffff;
+  transform: translate(-50%, -50%) translateY(-200px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .modal-window__header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee; }
+  .modal-window__title {
+    font-size: 1.5rem; }
+  .modal-window__close {
+    cursor: pointer; }
+  .modal-window__body {
+    padding: 1rem; }
+    .modal-window__body p {
+      margin: 0 0 0.1rem; }
+  .modal-window__footer {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #eee; }
+    .modal-window__footer .ui.button {
+      display: inline-block;
+      width: 49%; }
+      .modal-window__footer .ui.button:not(:last-child) {
+        margin-right: 2px; }

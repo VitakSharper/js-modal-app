@@ -1,0 +1,25 @@
+{
+  "name": "js-modal-app",
+  "version": "1.0.0",
+  "description": "Modal in pure JS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass ./sass/main.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitakSharper/js-modal-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitakSharper/js-modal-app/issues"
+  },
+  "homepage": "https://github.com/VitakSharper/js-modal-app#readme",
+  "dependencies": {
+    "fomantic-ui": "^2.8.4",
+    "fomantic-ui-css": "^2.8.4",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1"
+  }
+}
