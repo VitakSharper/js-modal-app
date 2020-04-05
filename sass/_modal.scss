@@ -1,6 +1,5 @@
 @import "mixins";
 
-
 .x-modal {
   &.open .modal-window {
     @include absCenter;
@@ -17,7 +16,7 @@
   }
 
   &.hide > .modal-overlay > .modal-window {
-    transform: translate(-50%, -50%) translateY(-300%);
+    transform: translate(-50%, -50%) translateY(-400%);
     transition: all .4s cubic-bezier(0.36, 0, 0.66, -0.56);
   }
 
@@ -28,12 +27,6 @@
 
 }
 
-
-//.x-modal.hide .modal-overlay,
-//.x-modal.hide .modal-window {
-//  opacity: 1;
-//  z-index: 1000;
-//}
 .modal-overlay {
   @include hideModal;
   position: fixed;
@@ -58,6 +51,14 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
+
+    &.bcg-red {
+      background: #EF9A9A;
+    }
+
+    &.bcg-blue {
+      background: #90CAF9;
+    }
   }
 
   &__title {
@@ -74,11 +75,16 @@
     & p {
       margin: 0 0 0.1rem;
     }
+
+    & img {
+      margin: 1rem auto;
+    }
   }
 
   &__footer {
     padding: 0.5rem 1rem;
     border-top: 1px solid #eee;
+    text-align: center;
 
     .ui.button {
       display: inline-block;
@@ -89,6 +95,18 @@
       }
     }
   }
+
+  &__text {
+    column-count: 2;
+    column-gap: 1rem;
+    column-rule: 2px solid #eee;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
 }
 
 

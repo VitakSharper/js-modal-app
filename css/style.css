@@ -318,7 +318,7 @@ template {
   z-index: 1000; }
 
 .x-modal.hide > .modal-overlay > .modal-window {
-  transform: translate(-50%, -50%) translateY(-300%);
+  transform: translate(-50%, -50%) translateY(-400%);
   transition: all 0.4s cubic-bezier(0.36, 0, 0.66, -0.56); }
 
 .x-modal.hide .modal-overlay {
@@ -349,6 +349,10 @@ template {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #eee; }
+    .modal-window__header.bcg-red {
+      background: #EF9A9A; }
+    .modal-window__header.bcg-blue {
+      background: #90CAF9; }
   .modal-window__title {
     font-size: 1.5rem; }
   .modal-window__close {
@@ -357,14 +361,25 @@ template {
     padding: 1rem; }
     .modal-window__body p {
       margin: 0 0 0.1rem; }
+    .modal-window__body img {
+      margin: 1rem auto; }
   .modal-window__footer {
     padding: 0.5rem 1rem;
-    border-top: 1px solid #eee; }
+    border-top: 1px solid #eee;
+    text-align: center; }
     .modal-window__footer .ui.button {
       display: inline-block;
       width: 49%; }
       .modal-window__footer .ui.button:not(:last-child) {
         margin-right: 2px; }
+  .modal-window__text {
+    column-count: 2;
+    column-gap: 1rem;
+    column-rule: 2px solid #eee;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
 
 .ui-card {
   margin-bottom: 1rem !important; }

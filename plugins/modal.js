@@ -32,14 +32,14 @@ function _createModal(options) {
     modal.insertAdjacentHTML("afterBegin", `
     <div class="modal-overlay">
         <div class="modal-window" style="width: ${options.width || DEFAULT_WIDTH}">
-            <div class="modal-window__header">
-                <span class="modal-window__title">${options.title || 'Window'}</span>
+            <div class="modal-window__header" data-header="true">
+                <span class="modal-window__title" data-title="true">${options.title || 'Window'}</span>
                 ${options.closable
         ? `<span class="modal-window__close" data-close="true">&times;</span>`
         : ''}
             </div>
             <div class="modal-window__body" data-content>
-                ${options.content || ''}
+                ${options.content || 'No content'}
             </div>            
         </div>
     </div>    
@@ -52,9 +52,11 @@ function _createModal(options) {
 
 
 $.modal = function (options) {
-    const $modal = _createModal(options);
+
     let onClose = false;
     let destroyed = false;
+    let $modal = _createModal(options);
+
     const modal = {
         open() {
             if (destroyed) return;
@@ -69,6 +71,7 @@ $.modal = function (options) {
             setTimeout(() => {
                 $modal.classList.remove('open');
                 $modal.classList.remove('hide');
+                if (typeof options.onClose === 'function') options.onClose();
             }, options.CLEAR_SPEED)
         }
     };
@@ -88,6 +91,12 @@ $.modal = function (options) {
         },
         setContent(html) {
             $modal.querySelector('[data-content]').innerHTML = html;
+        },
+        setTitle(html) {
+            $modal.querySelector('[data-title]').innerHTML = html;
+        },
+        setHeader(className) {
+            $modal.querySelector('[data-header]').classList.add(className);
         }
     })
 };
