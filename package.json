@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/VitakSharper/js-modal-app#readme",
   "dependencies": {
-    "fomantic-ui": "^2.8.4",
-    "fomantic-ui-css": "^2.8.4",
-    "node-sass": "^4.13.1",
+    "fomantic-ui": "^2.8.6",
+    "fomantic-ui-css": "^2.8.6",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1"
   }
 }
